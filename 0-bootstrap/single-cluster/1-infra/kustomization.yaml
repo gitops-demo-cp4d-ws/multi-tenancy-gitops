@@ -13,6 +13,7 @@ resources:
 #- argocd/namespace-tools.yaml
 #- argocd/namespace-instana-agent.yaml
 #- argocd/namespace-openshift-storage.yaml
+#- argocd/serviceaccounts-tools.yaml
 #- argocd/storage.yaml
 #- argocd/infraconfig.yaml
 #- argocd/machinesets.yaml

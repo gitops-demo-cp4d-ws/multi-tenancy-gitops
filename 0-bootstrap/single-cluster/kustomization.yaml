@@ -43,6 +43,12 @@ patches:
     - op: add
       path: /spec/sourceRepos/-
       value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_SERVICES}
+    - op: add
+      path: /spec/sourceRepos/-
+      value: https://charts.cloudnativetoolkit.dev
+    - op: add
+      path: /spec/sourceRepos/-
+      value: https://hollisc.github.io/gitops-testing/
 - target:
     group: argoproj.io
     kind: AppProject

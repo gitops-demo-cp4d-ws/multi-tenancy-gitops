@@ -21,6 +21,8 @@ resources:
 #- argocd/instances/ibm-process-mining-instance.yaml
 
 ## Cloud Pak for Data
+#- argocd/operators/ibm-cp4d-watson-studio-operator.yaml
+#- argocd/instances/ibm-cp4d-watson-studio-instance.yaml
 #- argocd/operators/ibm-cpd-platform-operator.yaml
 #- argocd/operators/ibm-cpd-scheduling-operator.yaml
 #- argocd/instances/ibm-cpd-instance.yaml
@@ -85,7 +87,10 @@ patches:
   patch: |-
     - op: add
       path: /spec/source/repoURL
-      value: ${HELM_REPOURL}
+      value: https://charts.cloudnativetoolkit.dev
+    - op: add
+      path: /spec/source/targetRevision
+      value: 1.0.0
 - target:
     name: ibm-automation-foundation-operator
   patch: |-
